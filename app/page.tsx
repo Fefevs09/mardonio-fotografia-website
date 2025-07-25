@@ -187,8 +187,8 @@ export default function Component() {
                   <span className="italic text-gray-300">Padrões Visuais</span>
                 </h2>
                 <p className="text-lg text-gray-400 mb-8 leading-relaxed font-normal">
-                  Por quase duas décadas, a Corporate Image tem sido sinônimo de
-                  excelência em documentação visual corporativa. Nossa
+                  Por mais de duas décadas, a Corporate Image tem sido sinônimo
+                  de excelência em documentação visual corporativa. Nossa
                   metodologia combina técnica fotográfica avançada com profundo
                   entendimento dos objetivos estratégicos de cada organização.
                 </p>
@@ -528,7 +528,7 @@ export default function Component() {
               <h2 className="text-4xl md:text-5xl font-serif font-normal text-white mb-8 leading-tight">
                 Vamos Construir
                 <br />
-                <span className="italic text-gray-300">História Juntos</span>
+                <span className="italic text-gray-300">História Juntos?</span>
               </h2>
             </div>
             <div className="grid lg:grid-cols-2 gap-20">
@@ -717,7 +717,7 @@ export default function Component() {
               </h4>
               <ul className="space-y-3 text-gray-400 font-normal">
                 <li>+55 (61) 98148-0142</li>
-                <li>executive@corporateimage.com</li>
+                <li>mardoniofotografia@hotmail.com</li>
                 <li>Brasília, Brasil</li>
               </ul>
             </div>
