@@ -129,9 +129,12 @@ export default function Component() {
                 <Button
                   size="lg"
                   className="bg-white text-black hover:bg-gray-100 text-lg px-12 py-4 rounded-none font-semibold group"
+                  asChild
                 >
-                  Explorar Portfolio
-                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  <Link href="#portfolio">
+                    Explorar Portfolio
+                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  </Link>
                 </Button>
               </div>
             </div>
@@ -436,7 +439,7 @@ export default function Component() {
                 </div>
               </div>
             </div>
-            <div className="text-center mt-16">
+            {/* <div className="text-center mt-16">
               <Button
                 size="lg"
                 variant="ghost"
@@ -445,7 +448,7 @@ export default function Component() {
                 Portfolio Completo
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-            </div>
+            </div> */}
           </div>
         </section>
 
