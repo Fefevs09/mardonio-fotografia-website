@@ -438,6 +438,348 @@ export default function Component() {
                   </div>
                 </div>
               </div>
+              <div className="group relative aspect-square overflow-hidden bg-gray-900">
+                <Image
+                  src="/images/mar1.jpeg"
+                  alt="Evento Corporativo"
+                  width={600}
+                  height={600}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="text-white text-center">
+                    <h3 className="text-lg font-serif font-medium mb-2 tracking-wide">
+                      CNC Confederação do Comércio de Bens e Serviços e Turismo
+                    </h3>
+                    <p className="text-sm text-gray-300 font-normal">
+                      Brasília, 2025
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="group relative aspect-square overflow-hidden bg-gray-900">
+                <Image
+                  src="/images/mar2.jpeg"
+                  alt="Evento Corporativo"
+                  width={600}
+                  height={600}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="text-white text-center">
+                    <h3 className="text-lg font-serif font-medium mb-2 tracking-wide">
+                      CNC Confederação do Comércio de Bens e Serviços e Turismo
+                    </h3>
+                    <p className="text-sm text-gray-300 font-normal">
+                      Brasília, 2025
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="group relative aspect-square overflow-hidden bg-gray-900">
+                <Image
+                  src="/images/mar3.jpeg"
+                  alt="Evento Corporativo"
+                  width={600}
+                  height={600}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="text-white text-center">
+                    <h3 className="text-lg font-serif font-medium mb-2 tracking-wide">
+                      CNC Confederação do Comércio de Bens e Serviços e Turismo
+                    </h3>
+                    <p className="text-sm text-gray-300 font-normal">
+                      Brasília, 2025
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="group relative aspect-square overflow-hidden bg-gray-900">
+                <Image
+                  src="/images/mar4.jpeg"
+                  alt="Evento Corporativo"
+                  width={600}
+                  height={600}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="text-white text-center">
+                    <h3 className="text-lg font-serif font-medium mb-2 tracking-wide">
+                      CNC Confederação do Comércio de Bens e Serviços e Turismo
+                    </h3>
+                    <p className="text-sm text-gray-300 font-normal">
+                      Brasília, 2025
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="group relative aspect-square overflow-hidden bg-gray-900">
+                <Image
+                  src="/images/mar5.jpeg"
+                  alt="Evento Corporativo"
+                  width={600}
+                  height={600}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="text-white text-center">
+                    <h3 className="text-lg font-serif font-medium mb-2 tracking-wide">
+                      CNC Confederação do Comércio de Bens e Serviços e Turismo
+                    </h3>
+                    <p className="text-sm text-gray-300 font-normal">
+                      Brasília, 2025
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="group relative aspect-square overflow-hidden bg-gray-900">
+                <Image
+                  src="/images/mar6.jpeg"
+                  alt="Evento Corporativo"
+                  width={600}
+                  height={600}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="text-white text-center">
+                    <h3 className="text-lg font-serif font-medium mb-2 tracking-wide">
+                      CNC Confederação do Comércio de Bens e Serviços e Turismo
+                    </h3>
+                    <p className="text-sm text-gray-300 font-normal">
+                      Brasília, 2025
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="group relative aspect-square overflow-hidden bg-gray-900">
+                <Image
+                  src="/images/mar7.jpeg"
+                  alt="Evento Corporativo"
+                  width={600}
+                  height={600}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="text-white text-center">
+                    <h3 className="text-lg font-serif font-medium mb-2 tracking-wide">
+                      CNC Confederação do Comércio de Bens e Serviços e Turismo
+                    </h3>
+                    <p className="text-sm text-gray-300 font-normal">
+                      Brasília, 2025
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="group relative aspect-square overflow-hidden bg-gray-900">
+                <Image
+                  src="/images/mar8.jpeg"
+                  alt="Evento Corporativo"
+                  width={600}
+                  height={600}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="text-white text-center">
+                    <h3 className="text-lg font-serif font-medium mb-2 tracking-wide">
+                      CNC Confederação do Comércio de Bens e Serviços e Turismo
+                    </h3>
+                    <p className="text-sm text-gray-300 font-normal">
+                      Brasília, 2025
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="group relative aspect-square overflow-hidden bg-gray-900">
+                <Image
+                  src="/images/mar9.jpeg"
+                  alt="Evento Corporativo"
+                  width={600}
+                  height={600}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="text-white text-center">
+                    <h3 className="text-lg font-serif font-medium mb-2 tracking-wide">
+                      CNC Confederação do Comércio de Bens e Serviços e Turismo
+                    </h3>
+                    <p className="text-sm text-gray-300 font-normal">
+                      Brasília, 2025
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="group relative aspect-square overflow-hidden bg-gray-900">
+                <Image
+                  src="/images/mar10.jpeg"
+                  alt="Evento Corporativo"
+                  width={600}
+                  height={600}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="text-white text-center">
+                    <h3 className="text-lg font-serif font-medium mb-2 tracking-wide">
+                      CNC Confederação do Comércio de Bens e Serviços e Turismo
+                    </h3>
+                    <p className="text-sm text-gray-300 font-normal">
+                      Brasília, 2025
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="group relative aspect-square overflow-hidden bg-gray-900">
+                <Image
+                  src="/images/mar11.jpeg"
+                  alt="Evento Corporativo"
+                  width={600}
+                  height={600}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="text-white text-center">
+                    <h3 className="text-lg font-serif font-medium mb-2 tracking-wide">
+                      CNC Confederação do Comércio de Bens e Serviços e Turismo
+                    </h3>
+                    <p className="text-sm text-gray-300 font-normal">
+                      Brasília, 2025
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="group relative aspect-square overflow-hidden bg-gray-900">
+                <Image
+                  src="/images/mar12.jpeg"
+                  alt="Evento Corporativo"
+                  width={600}
+                  height={600}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="text-white text-center">
+                    <h3 className="text-lg font-serif font-medium mb-2 tracking-wide">
+                      CNC Confederação do Comércio de Bens e Serviços e Turismo
+                    </h3>
+                    <p className="text-sm text-gray-300 font-normal">
+                      Brasília, 2025
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="group relative aspect-square overflow-hidden bg-gray-900">
+                <Image
+                  src="/images/mar14.jpeg"
+                  alt="Evento Corporativo"
+                  width={600}
+                  height={600}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="text-white text-center">
+                    <h3 className="text-lg font-serif font-medium mb-2 tracking-wide">
+                      CNC Confederação do Comércio de Bens e Serviços e Turismo
+                    </h3>
+                    <p className="text-sm text-gray-300 font-normal">
+                      Brasília, 2025
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="group relative aspect-square overflow-hidden bg-gray-900">
+                <Image
+                  src="/images/mar15.jpeg"
+                  alt="Evento Corporativo"
+                  width={600}
+                  height={600}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="text-white text-center">
+                    <h3 className="text-lg font-serif font-medium mb-2 tracking-wide">
+                      CNC Confederação do Comércio de Bens e Serviços e Turismo
+                    </h3>
+                    <p className="text-sm text-gray-300 font-normal">
+                      Brasília, 2025
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="group relative aspect-square overflow-hidden bg-gray-900">
+                <Image
+                  src="/images/mar16.jpeg"
+                  alt="Evento Corporativo"
+                  width={600}
+                  height={600}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="text-white text-center">
+                    <h3 className="text-lg font-serif font-medium mb-2 tracking-wide">
+                      CNC Confederação do Comércio de Bens e Serviços e Turismo
+                    </h3>
+                    <p className="text-sm text-gray-300 font-normal">
+                      Brasília, 2025
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="group relative aspect-square overflow-hidden bg-gray-900">
+                <Image
+                  src="/images/mar17.jpeg"
+                  alt="Evento Corporativo"
+                  width={600}
+                  height={600}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="text-white text-center">
+                    <h3 className="text-lg font-serif font-medium mb-2 tracking-wide">
+                      CNC Confederação do Comércio de Bens e Serviços e Turismo
+                    </h3>
+                    <p className="text-sm text-gray-300 font-normal">
+                      Brasília, 2025
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="group relative aspect-square overflow-hidden bg-gray-900">
+                <Image
+                  src="/images/mar18.jpeg"
+                  alt="Evento Corporativo"
+                  width={600}
+                  height={600}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="text-white text-center">
+                    <h3 className="text-lg font-serif font-medium mb-2 tracking-wide">
+                      CNC Confederação do Comércio de Bens e Serviços e Turismo
+                    </h3>
+                    <p className="text-sm text-gray-300 font-normal">
+                      Brasília, 2025
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="group relative aspect-square overflow-hidden bg-gray-900">
+                <Image
+                  src="/images/mar19.jpeg"
+                  alt="Evento Corporativo"
+                  width={600}
+                  height={600}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="text-white text-center">
+                    <h3 className="text-lg font-serif font-medium mb-2 tracking-wide">
+                      CNC Confederação do Comércio de Bens e Serviços e Turismo
+                    </h3>
+                    <p className="text-sm text-gray-300 font-normal">
+                      Brasília, 2025
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
             {/* <div className="text-center mt-16">
               <Button
