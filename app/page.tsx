@@ -15,10 +15,14 @@ import {
   Star,
   ArrowRight,
   CheckCircle,
+  X,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import CountUp from "react-countup";
+import { useState, useEffect, useCallback } from "react";
 
 function NumberAnimated({
   number,
@@ -41,7 +45,77 @@ function NumberAnimated({
   );
 }
 
+const CNC = "CNC Confederação do Comércio de Bens e Serviços e Turismo";
+
+const portfolioImages = [
+  { src: "/images/54646413186_792e8c4d22_o.jpg", title: "80 anos CNC - Conferência Nacional de Corporações", location: "Brasília, 2025" },
+  { src: "/images/MAR_0267.jpg",                  title: "ANADEP Defensoria em Todos os Cantos",            location: "Brasília, 2025" },
+  { src: "/images/MAR_3052.jpg",                  title: "Ministério das Comunicações e EAF",              location: "Brasília, 2025" },
+  { src: "/images/MAR_8953.JPG",                  title: "INFRA S.A",                                     location: "Brasília, 2025" },
+  { src: "/images/MAR_3435.JPG",                  title: "EL PACCTO G20",                                 location: "Brasília, 2025" },
+  { src: "/images/MAR_5098.JPG",                  title: "IBGE 3º Encontro Nacional de Servidores",       location: "Brasília, 2025" },
+  { src: "/images/mar1.jpeg",  title: CNC, location: "Brasília, 2025" },
+  { src: "/images/mar2.jpeg",  title: CNC, location: "Brasília, 2025" },
+  { src: "/images/mar3.jpeg",  title: CNC, location: "Brasília, 2025" },
+  { src: "/images/mar4.jpeg",  title: CNC, location: "Brasília, 2025" },
+  { src: "/images/mar5.jpeg",  title: CNC, location: "Brasília, 2025" },
+  { src: "/images/mar6.jpeg",  title: CNC, location: "Brasília, 2025" },
+  { src: "/images/mar7.jpeg",  title: CNC, location: "Brasília, 2025" },
+  { src: "/images/mar8.jpeg",  title: CNC, location: "Brasília, 2025" },
+  { src: "/images/mar9.jpeg",  title: CNC, location: "Brasília, 2025" },
+  { src: "/images/mar10.jpeg", title: CNC, location: "Brasília, 2025" },
+  { src: "/images/mar11.jpeg", title: CNC, location: "Brasília, 2025" },
+  { src: "/images/mar12.jpeg", title: CNC, location: "Brasília, 2025" },
+  { src: "/images/mar14.jpeg", title: CNC, location: "Brasília, 2025" },
+  { src: "/images/mar15.jpeg", title: CNC, location: "Brasília, 2025" },
+  { src: "/images/mar16.jpeg", title: CNC, location: "Brasília, 2025" },
+  { src: "/images/mar17.jpeg", title: CNC, location: "Brasília, 2025" },
+  { src: "/images/mar18.jpeg", title: CNC, location: "Brasília, 2025" },
+  { src: "/images/mar19.jpeg", title: CNC, location: "Brasília, 2025" },
+  { src: "/images/mar20.jpeg", title: CNC, location: "CNC apresenta seu novo Observatório à imprensa " },
+  { src: "/images/mar21.jpeg", title: CNC, location: "CNC apresenta seu novo Observatório à imprensa " },
+  { src: "/images/mar22.jpeg", title: CNC, location: "CNC apresenta seu novo Observatório à imprensa " },
+  { src: "/images/mar23.jpeg", title: CNC, location: "CNC apresenta seu novo Observatório à imprensa " },
+  { src: "/images/mar24.jpeg", title: CNC, location: "CNC apresenta seu novo Observatório à imprensa " },
+  { src: "/images/mar25.jpeg", title: CNC, location: "CNC apresenta seu novo Observatório à imprensa " },
+  { src: "/images/mar26.jpeg", title: CNC, location: "CNC apresenta seu novo Observatório à imprensa " },
+  { src: "/images/mar27.jpeg", title: CNC, location: "CNC apresenta seu novo Observatório à imprensa " },
+  { src: "/images/mar28.jpeg", title: CNC, location: "CNC apresenta seu novo Observatório à imprensa " },
+  { src: "/images/mar29.jpeg", title: CNC, location: "CNC apresenta seu novo Observatório à imprensa " },
+  { src: "/images/mar30.jpeg", title: CNC, location: "CNC apresenta seu novo Observatório à imprensa " },
+  { src: "/images/mar31.jpeg", title: CNC, location: "CNC apresenta seu novo Observatório à imprensa " },
+];
+
 export default function Component() {
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+
+  const openLightbox = (index: number) => setLightboxIndex(index);
+  const closeLightbox = () => setLightboxIndex(null);
+
+  const goNext = useCallback(() => {
+    setLightboxIndex((i) => (i === null ? null : (i + 1) % portfolioImages.length));
+  }, []);
+
+  const goPrev = useCallback(() => {
+    setLightboxIndex((i) =>
+      i === null ? null : (i - 1 + portfolioImages.length) % portfolioImages.length
+    );
+  }, []);
+
+  useEffect(() => {
+    if (lightboxIndex === null) return;
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") closeLightbox();
+      if (e.key === "ArrowRight") goNext();
+      if (e.key === "ArrowLeft") goPrev();
+    };
+    document.addEventListener("keydown", handleKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", handleKey);
+      document.body.style.overflow = "";
+    };
+  }, [lightboxIndex, goNext, goPrev]);
   return (
     <div className="flex flex-col min-h-screen bg-black text-white font-sans">
       {/* Header */}
@@ -324,462 +398,29 @@ export default function Component() {
               </h2>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-1">
-              <div className="group relative aspect-square overflow-hidden bg-gray-900">
-                <Image
-                  src="/images/54646413186_792e8c4d22_o.jpg"
-                  alt="Conferência Fortune Global"
-                  width={600}
-                  height={600}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="text-white text-center">
-                    <h3 className="text-lg font-serif font-medium mb-2 tracking-wide">
-                      80 anos CNC - Conferência Nacional de Corporações
-                    </h3>
-                    <p className="text-sm text-gray-300 font-normal">
-                      Brasília, 2025
-                    </p>
+              {portfolioImages.map((item, index) => (
+                <div
+                  key={index}
+                  className="group relative aspect-square overflow-hidden bg-gray-900 cursor-pointer"
+                  onClick={() => openLightbox(index)}
+                >
+                  <Image
+                    src={item.src}
+                    alt={item.title}
+                    width={600}
+                    height={600}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <div className="text-white text-center px-4">
+                      <h3 className="text-lg font-serif font-medium mb-2 tracking-wide">
+                        {item.title}
+                      </h3>
+                      <p className="text-sm text-gray-300 font-normal">{item.location}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="group relative aspect-square overflow-hidden bg-gray-900">
-                <Image
-                  src="/images/MAR_0267.jpg"
-                  alt="ANADEP Defensoria em Todos os Cantos"
-                  width={600}
-                  height={600}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="text-white text-center">
-                    <h3 className="text-lg font-serif font-medium mb-2 tracking-wide">
-                      ANADEP Defensoria em Todos os Cantos
-                    </h3>
-                    <p className="text-sm text-gray-300 font-normal">
-                      Brasília, 2025
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="group relative aspect-square overflow-hidden bg-gray-900">
-                <Image
-                  src="/images/MAR_3052.jpg"
-                  alt="Ministerios das comunicações e EAF"
-                  width={600}
-                  height={600}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="text-white text-center">
-                    <h3 className="text-lg font-serif font-medium mb-2 tracking-wide">
-                      Ministerios das comunicações e EAF
-                    </h3>
-                    <p className="text-sm text-gray-300 font-normal">
-                      Brasília, 2025
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="group relative aspect-square overflow-hidden bg-gray-900">
-                <Image
-                  src="/images/MAR_8953.JPG"
-                  alt="INFRA S.A"
-                  width={600}
-                  height={600}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="text-white text-center">
-                    <h3 className="text-lg font-serif font-medium mb-2 tracking-wide">
-                      INFRA S.A
-                    </h3>
-                    <p className="text-sm text-gray-300 font-normal">
-                      Brasília, 2025
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="group relative aspect-square overflow-hidden bg-gray-900">
-                <Image
-                  src="/images/MAR_3435.JPG"
-                  alt="Reunião Estratégica"
-                  width={600}
-                  height={600}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="text-white text-center">
-                    <h3 className="text-lg font-serif font-medium mb-2 tracking-wide">
-                      EL PACCTO G20
-                    </h3>
-                    <p className="text-sm text-gray-300 font-normal">
-                      Brasília, 2025
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="group relative aspect-square overflow-hidden bg-gray-900">
-                <Image
-                  src="/images/MAR_5098.JPG"
-                  alt="IBGE 3º Encontro Nacional de Servifores do IBGE"
-                  width={600}
-                  height={600}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="text-white text-center">
-                    <h3 className="text-lg font-serif font-medium mb-2 tracking-wide">
-                      IBGE 3º Encontro Nacional de Servifores do IBGE
-                    </h3>
-                    <p className="text-sm text-gray-300 font-normal">
-                      Brasília, 2025
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="group relative aspect-square overflow-hidden bg-gray-900">
-                <Image
-                  src="/images/mar1.jpeg"
-                  alt="Evento Corporativo"
-                  width={600}
-                  height={600}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="text-white text-center">
-                    <h3 className="text-lg font-serif font-medium mb-2 tracking-wide">
-                      CNC Confederação do Comércio de Bens e Serviços e Turismo
-                    </h3>
-                    <p className="text-sm text-gray-300 font-normal">
-                      Brasília, 2025
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="group relative aspect-square overflow-hidden bg-gray-900">
-                <Image
-                  src="/images/mar2.jpeg"
-                  alt="Evento Corporativo"
-                  width={600}
-                  height={600}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="text-white text-center">
-                    <h3 className="text-lg font-serif font-medium mb-2 tracking-wide">
-                      CNC Confederação do Comércio de Bens e Serviços e Turismo
-                    </h3>
-                    <p className="text-sm text-gray-300 font-normal">
-                      Brasília, 2025
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="group relative aspect-square overflow-hidden bg-gray-900">
-                <Image
-                  src="/images/mar3.jpeg"
-                  alt="Evento Corporativo"
-                  width={600}
-                  height={600}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="text-white text-center">
-                    <h3 className="text-lg font-serif font-medium mb-2 tracking-wide">
-                      CNC Confederação do Comércio de Bens e Serviços e Turismo
-                    </h3>
-                    <p className="text-sm text-gray-300 font-normal">
-                      Brasília, 2025
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="group relative aspect-square overflow-hidden bg-gray-900">
-                <Image
-                  src="/images/mar4.jpeg"
-                  alt="Evento Corporativo"
-                  width={600}
-                  height={600}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="text-white text-center">
-                    <h3 className="text-lg font-serif font-medium mb-2 tracking-wide">
-                      CNC Confederação do Comércio de Bens e Serviços e Turismo
-                    </h3>
-                    <p className="text-sm text-gray-300 font-normal">
-                      Brasília, 2025
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="group relative aspect-square overflow-hidden bg-gray-900">
-                <Image
-                  src="/images/mar5.jpeg"
-                  alt="Evento Corporativo"
-                  width={600}
-                  height={600}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="text-white text-center">
-                    <h3 className="text-lg font-serif font-medium mb-2 tracking-wide">
-                      CNC Confederação do Comércio de Bens e Serviços e Turismo
-                    </h3>
-                    <p className="text-sm text-gray-300 font-normal">
-                      Brasília, 2025
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="group relative aspect-square overflow-hidden bg-gray-900">
-                <Image
-                  src="/images/mar6.jpeg"
-                  alt="Evento Corporativo"
-                  width={600}
-                  height={600}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="text-white text-center">
-                    <h3 className="text-lg font-serif font-medium mb-2 tracking-wide">
-                      CNC Confederação do Comércio de Bens e Serviços e Turismo
-                    </h3>
-                    <p className="text-sm text-gray-300 font-normal">
-                      Brasília, 2025
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="group relative aspect-square overflow-hidden bg-gray-900">
-                <Image
-                  src="/images/mar7.jpeg"
-                  alt="Evento Corporativo"
-                  width={600}
-                  height={600}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="text-white text-center">
-                    <h3 className="text-lg font-serif font-medium mb-2 tracking-wide">
-                      CNC Confederação do Comércio de Bens e Serviços e Turismo
-                    </h3>
-                    <p className="text-sm text-gray-300 font-normal">
-                      Brasília, 2025
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="group relative aspect-square overflow-hidden bg-gray-900">
-                <Image
-                  src="/images/mar8.jpeg"
-                  alt="Evento Corporativo"
-                  width={600}
-                  height={600}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="text-white text-center">
-                    <h3 className="text-lg font-serif font-medium mb-2 tracking-wide">
-                      CNC Confederação do Comércio de Bens e Serviços e Turismo
-                    </h3>
-                    <p className="text-sm text-gray-300 font-normal">
-                      Brasília, 2025
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="group relative aspect-square overflow-hidden bg-gray-900">
-                <Image
-                  src="/images/mar9.jpeg"
-                  alt="Evento Corporativo"
-                  width={600}
-                  height={600}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="text-white text-center">
-                    <h3 className="text-lg font-serif font-medium mb-2 tracking-wide">
-                      CNC Confederação do Comércio de Bens e Serviços e Turismo
-                    </h3>
-                    <p className="text-sm text-gray-300 font-normal">
-                      Brasília, 2025
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="group relative aspect-square overflow-hidden bg-gray-900">
-                <Image
-                  src="/images/mar10.jpeg"
-                  alt="Evento Corporativo"
-                  width={600}
-                  height={600}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="text-white text-center">
-                    <h3 className="text-lg font-serif font-medium mb-2 tracking-wide">
-                      CNC Confederação do Comércio de Bens e Serviços e Turismo
-                    </h3>
-                    <p className="text-sm text-gray-300 font-normal">
-                      Brasília, 2025
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="group relative aspect-square overflow-hidden bg-gray-900">
-                <Image
-                  src="/images/mar11.jpeg"
-                  alt="Evento Corporativo"
-                  width={600}
-                  height={600}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="text-white text-center">
-                    <h3 className="text-lg font-serif font-medium mb-2 tracking-wide">
-                      CNC Confederação do Comércio de Bens e Serviços e Turismo
-                    </h3>
-                    <p className="text-sm text-gray-300 font-normal">
-                      Brasília, 2025
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="group relative aspect-square overflow-hidden bg-gray-900">
-                <Image
-                  src="/images/mar12.jpeg"
-                  alt="Evento Corporativo"
-                  width={600}
-                  height={600}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="text-white text-center">
-                    <h3 className="text-lg font-serif font-medium mb-2 tracking-wide">
-                      CNC Confederação do Comércio de Bens e Serviços e Turismo
-                    </h3>
-                    <p className="text-sm text-gray-300 font-normal">
-                      Brasília, 2025
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="group relative aspect-square overflow-hidden bg-gray-900">
-                <Image
-                  src="/images/mar14.jpeg"
-                  alt="Evento Corporativo"
-                  width={600}
-                  height={600}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="text-white text-center">
-                    <h3 className="text-lg font-serif font-medium mb-2 tracking-wide">
-                      CNC Confederação do Comércio de Bens e Serviços e Turismo
-                    </h3>
-                    <p className="text-sm text-gray-300 font-normal">
-                      Brasília, 2025
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="group relative aspect-square overflow-hidden bg-gray-900">
-                <Image
-                  src="/images/mar15.jpeg"
-                  alt="Evento Corporativo"
-                  width={600}
-                  height={600}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="text-white text-center">
-                    <h3 className="text-lg font-serif font-medium mb-2 tracking-wide">
-                      CNC Confederação do Comércio de Bens e Serviços e Turismo
-                    </h3>
-                    <p className="text-sm text-gray-300 font-normal">
-                      Brasília, 2025
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="group relative aspect-square overflow-hidden bg-gray-900">
-                <Image
-                  src="/images/mar16.jpeg"
-                  alt="Evento Corporativo"
-                  width={600}
-                  height={600}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="text-white text-center">
-                    <h3 className="text-lg font-serif font-medium mb-2 tracking-wide">
-                      CNC Confederação do Comércio de Bens e Serviços e Turismo
-                    </h3>
-                    <p className="text-sm text-gray-300 font-normal">
-                      Brasília, 2025
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="group relative aspect-square overflow-hidden bg-gray-900">
-                <Image
-                  src="/images/mar17.jpeg"
-                  alt="Evento Corporativo"
-                  width={600}
-                  height={600}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="text-white text-center">
-                    <h3 className="text-lg font-serif font-medium mb-2 tracking-wide">
-                      CNC Confederação do Comércio de Bens e Serviços e Turismo
-                    </h3>
-                    <p className="text-sm text-gray-300 font-normal">
-                      Brasília, 2025
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="group relative aspect-square overflow-hidden bg-gray-900">
-                <Image
-                  src="/images/mar18.jpeg"
-                  alt="Evento Corporativo"
-                  width={600}
-                  height={600}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="text-white text-center">
-                    <h3 className="text-lg font-serif font-medium mb-2 tracking-wide">
-                      CNC Confederação do Comércio de Bens e Serviços e Turismo
-                    </h3>
-                    <p className="text-sm text-gray-300 font-normal">
-                      Brasília, 2025
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="group relative aspect-square overflow-hidden bg-gray-900">
-                <Image
-                  src="/images/mar19.jpeg"
-                  alt="Evento Corporativo"
-                  width={600}
-                  height={600}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="text-white text-center">
-                    <h3 className="text-lg font-serif font-medium mb-2 tracking-wide">
-                      CNC Confederação do Comércio de Bens e Serviços e Turismo
-                    </h3>
-                    <p className="text-sm text-gray-300 font-normal">
-                      Brasília, 2025
-                    </p>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
             {/* <div className="text-center mt-16">
               <Button
@@ -1075,6 +716,69 @@ export default function Component() {
           </div>
         </div>
       </footer>
+      {/* Lightbox Modal */}
+      {lightboxIndex !== null && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 backdrop-blur-sm"
+          onClick={closeLightbox}
+        >
+          {/* Close button */}
+          <button
+            className="absolute top-5 right-5 text-white/70 hover:text-white transition-colors z-10 bg-black/40 rounded-full p-2"
+            onClick={closeLightbox}
+            aria-label="Fechar"
+          >
+            <X className="w-7 h-7" />
+          </button>
+
+          {/* Prev button */}
+          <button
+            className="absolute left-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white transition-colors z-10 bg-black/40 rounded-full p-3"
+            onClick={(e) => { e.stopPropagation(); goPrev(); }}
+            aria-label="Anterior"
+          >
+            <ChevronLeft className="w-8 h-8" />
+          </button>
+
+          {/* Image */}
+          <div
+            className="relative max-w-[90vw] max-h-[85vh] flex flex-col items-center"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="relative">
+              <Image
+                src={portfolioImages[lightboxIndex].src}
+                alt={portfolioImages[lightboxIndex].title}
+                width={1200}
+                height={900}
+                className="max-w-[90vw] max-h-[80vh] object-contain rounded-sm shadow-2xl"
+                priority
+              />
+            </div>
+            {/* Caption */}
+            <div className="mt-4 text-center">
+              <p className="text-white font-serif text-lg font-medium tracking-wide">
+                {portfolioImages[lightboxIndex].title}
+              </p>
+              <p className="text-gray-400 text-sm mt-1">
+                {portfolioImages[lightboxIndex].location}
+              </p>
+              <p className="text-gray-600 text-xs mt-2">
+                {lightboxIndex + 1} / {portfolioImages.length}
+              </p>
+            </div>
+          </div>
+
+          {/* Next button */}
+          <button
+            className="absolute right-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white transition-colors z-10 bg-black/40 rounded-full p-3"
+            onClick={(e) => { e.stopPropagation(); goNext(); }}
+            aria-label="Próxima"
+          >
+            <ChevronRight className="w-8 h-8" />
+          </button>
+        </div>
+      )}
     </div>
   );
 }
