@@ -48,59 +48,66 @@ function NumberAnimated({
 const CNC = "CNC Confederação do Comércio de Bens e Serviços e Turismo";
 
 const portfolioImages = [
-  { src: "/images/54646413186_792e8c4d22_o.jpg", title: "80 anos CNC - Conferência Nacional de Corporações", location: "Brasília, 2025" },
-  { src: "/images/MAR_0267.jpg",                  title: "ANADEP Defensoria em Todos os Cantos",            location: "Brasília, 2025" },
-  { src: "/images/MAR_3052.jpg",                  title: "Ministério das Comunicações e EAF",              location: "Brasília, 2025" },
-  { src: "/images/MAR_8953.JPG",                  title: "INFRA S.A",                                     location: "Brasília, 2025" },
-  { src: "/images/MAR_3435.JPG",                  title: "EL PACCTO G20",                                 location: "Brasília, 2025" },
-  { src: "/images/MAR_5098.JPG",                  title: "IBGE 3º Encontro Nacional de Servidores",       location: "Brasília, 2025" },
-  { src: "/images/mar1.jpeg",  title: CNC, location: "Brasília, 2025" },
-  { src: "/images/mar2.jpeg",  title: CNC, location: "Brasília, 2025" },
-  { src: "/images/mar3.jpeg",  title: CNC, location: "Brasília, 2025" },
-  { src: "/images/mar4.jpeg",  title: CNC, location: "Brasília, 2025" },
-  { src: "/images/mar5.jpeg",  title: CNC, location: "Brasília, 2025" },
-  { src: "/images/mar6.jpeg",  title: CNC, location: "Brasília, 2025" },
-  { src: "/images/mar7.jpeg",  title: CNC, location: "Brasília, 2025" },
-  { src: "/images/mar8.jpeg",  title: CNC, location: "Brasília, 2025" },
-  { src: "/images/mar9.jpeg",  title: CNC, location: "Brasília, 2025" },
-  { src: "/images/mar10.jpeg", title: CNC, location: "Brasília, 2025" },
-  { src: "/images/mar11.jpeg", title: CNC, location: "Brasília, 2025" },
-  { src: "/images/mar12.jpeg", title: CNC, location: "Brasília, 2025" },
-  { src: "/images/mar14.jpeg", title: CNC, location: "Brasília, 2025" },
-  { src: "/images/mar15.jpeg", title: CNC, location: "Brasília, 2025" },
-  { src: "/images/mar16.jpeg", title: CNC, location: "Brasília, 2025" },
-  { src: "/images/mar17.jpeg", title: CNC, location: "Brasília, 2025" },
-  { src: "/images/mar18.jpeg", title: CNC, location: "Brasília, 2025" },
-  { src: "/images/mar19.jpeg", title: CNC, location: "Brasília, 2025" },
-  { src: "/images/mar20.jpeg", title: CNC, location: "CNC apresenta seu novo Observatório à imprensa " },
-  { src: "/images/mar21.jpeg", title: CNC, location: "CNC apresenta seu novo Observatório à imprensa " },
-  { src: "/images/mar22.jpeg", title: CNC, location: "CNC apresenta seu novo Observatório à imprensa " },
-  { src: "/images/mar23.jpeg", title: CNC, location: "CNC apresenta seu novo Observatório à imprensa " },
-  { src: "/images/mar24.jpeg", title: CNC, location: "CNC apresenta seu novo Observatório à imprensa " },
-  { src: "/images/mar25.jpeg", title: CNC, location: "CNC apresenta seu novo Observatório à imprensa " },
-  { src: "/images/mar26.jpeg", title: CNC, location: "CNC apresenta seu novo Observatório à imprensa " },
-  { src: "/images/mar27.jpeg", title: CNC, location: "CNC apresenta seu novo Observatório à imprensa " },
-  { src: "/images/mar28.jpeg", title: CNC, location: "CNC apresenta seu novo Observatório à imprensa " },
-  { src: "/images/mar29.jpeg", title: CNC, location: "CNC apresenta seu novo Observatório à imprensa " },
-  { src: "/images/mar30.jpeg", title: CNC, location: "CNC apresenta seu novo Observatório à imprensa " },
-  { src: "/images/mar31.jpeg", title: CNC, location: "CNC apresenta seu novo Observatório à imprensa " },
+  { src: "/images/54646413186_792e8c4d22_o.jpg", title: "80 anos CNC - Conferência Nacional de Corporações", location: "Brasília, 2025", category: "CNC" },
+  { src: "/images/MAR_0267.jpg",                  title: "ANADEP Defensoria em Todos os Cantos",            location: "Brasília, 2025", category: "ANADEP" },
+  { src: "/images/MAR_3052.jpg",                  title: "Ministério das Comunicações e EAF",              location: "Brasília, 2025", category: "Ministério das Comunicações" },
+  { src: "/images/MAR_8953.JPG",                  title: "INFRA S.A",                                     location: "Brasília, 2025", category: "INFRA S.A" },
+  { src: "/images/MAR_3435.JPG",                  title: "EL PACCTO G20",                                 location: "Brasília, 2025", category: "EL PACCTO" },
+  { src: "/images/MAR_5098.JPG",                  title: "IBGE 3º Encontro Nacional de Servidores",       location: "Brasília, 2025", category: "IBGE" },
+  { src: "/images/mar1.jpeg",  title: CNC, location: "Brasília, 2025", category: "CNC" },
+  { src: "/images/mar2.jpeg",  title: CNC, location: "Brasília, 2025", category: "CNC" },
+  { src: "/images/mar3.jpeg",  title: CNC, location: "Brasília, 2025", category: "CNC" },
+  { src: "/images/mar4.jpeg",  title: CNC, location: "Brasília, 2025", category: "CNC" },
+  { src: "/images/mar5.jpeg",  title: CNC, location: "Brasília, 2025", category: "CNC" },
+  { src: "/images/mar6.jpeg",  title: CNC, location: "Brasília, 2025", category: "CNC" },
+  { src: "/images/mar7.jpeg",  title: CNC, location: "Brasília, 2025", category: "CNC" },
+  { src: "/images/mar8.jpeg",  title: CNC, location: "Brasília, 2025", category: "CNC" },
+  { src: "/images/mar9.jpeg",  title: CNC, location: "Brasília, 2025", category: "CNC" },
+  { src: "/images/mar10.jpeg", title: CNC, location: "Brasília, 2025", category: "CNC" },
+  { src: "/images/mar11.jpeg", title: CNC, location: "Brasília, 2025", category: "CNC" },
+  { src: "/images/mar12.jpeg", title: CNC, location: "Brasília, 2025", category: "CNC" },
+  { src: "/images/mar14.jpeg", title: CNC, location: "Brasília, 2025", category: "CNC" },
+  { src: "/images/mar15.jpeg", title: CNC, location: "Brasília, 2025", category: "CNC" },
+  { src: "/images/mar16.jpeg", title: CNC, location: "Brasília, 2025", category: "CNC" },
+  { src: "/images/mar17.jpeg", title: CNC, location: "Brasília, 2025", category: "CNC" },
+  { src: "/images/mar18.jpeg", title: CNC, location: "Brasília, 2025", category: "CNC" },
+  { src: "/images/mar19.jpeg", title: CNC, location: "Brasília, 2025", category: "CNC" },
+  { src: "/images/mar20.jpeg", title: CNC, location: "CNC apresenta seu novo Observatório à imprensa ", category: "CNC" },
+  { src: "/images/mar21.jpeg", title: CNC, location: "CNC apresenta seu novo Observatório à imprensa ", category: "CNC" },
+  { src: "/images/mar22.jpeg", title: CNC, location: "CNC apresenta seu novo Observatório à imprensa ", category: "CNC" },
+  { src: "/images/mar23.jpeg", title: CNC, location: "CNC apresenta seu novo Observatório à imprensa ", category: "CNC" },
+  { src: "/images/mar24.jpeg", title: CNC, location: "CNC apresenta seu novo Observatório à imprensa ", category: "CNC" },
+  { src: "/images/mar25.jpeg", title: CNC, location: "CNC apresenta seu novo Observatório à imprensa ", category: "CNC" },
+  { src: "/images/mar26.jpeg", title: CNC, location: "CNC apresenta seu novo Observatório à imprensa ", category: "CNC" },
+  { src: "/images/mar27.jpeg", title: CNC, location: "CNC apresenta seu novo Observatório à imprensa ", category: "CNC" },
+  { src: "/images/mar28.jpeg", title: CNC, location: "CNC apresenta seu novo Observatório à imprensa ", category: "CNC" },
+  { src: "/images/mar29.jpeg", title: CNC, location: "CNC apresenta seu novo Observatório à imprensa ", category: "CNC" },
+  { src: "/images/mar30.jpeg", title: CNC, location: "CNC apresenta seu novo Observatório à imprensa ", category: "CNC" },
+  { src: "/images/mar31.jpeg", title: CNC, location: "CNC apresenta seu novo Observatório à imprensa ", category: "CNC" },
 ];
 
 export default function Component() {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const [activeFilter, setActiveFilter] = useState("Todos");
+
+  const categories = ["Todos", ...Array.from(new Set(portfolioImages.map((img) => img.category)))];
+
+  const filteredImages = activeFilter === "Todos"
+    ? portfolioImages
+    : portfolioImages.filter((img) => img.category === activeFilter);
 
   const openLightbox = (index: number) => setLightboxIndex(index);
   const closeLightbox = () => setLightboxIndex(null);
 
   const goNext = useCallback(() => {
-    setLightboxIndex((i) => (i === null ? null : (i + 1) % portfolioImages.length));
-  }, []);
+    setLightboxIndex((i) => (i === null ? null : (i + 1) % filteredImages.length));
+  }, [filteredImages.length]);
 
   const goPrev = useCallback(() => {
     setLightboxIndex((i) =>
-      i === null ? null : (i - 1 + portfolioImages.length) % portfolioImages.length
+      i === null ? null : (i - 1 + filteredImages.length) % filteredImages.length
     );
-  }, []);
+  }, [filteredImages.length]);
 
   useEffect(() => {
     if (lightboxIndex === null) return;
@@ -387,7 +394,7 @@ export default function Component() {
         {/* Portfolio Section */}
         <section id="portfolio" className="py-32 bg-black">
           <div className="container mx-auto px-6 lg:px-8">
-            <div className="text-center mb-20">
+            <div className="text-center mb-12">
               <div className="text-sm font-semibold text-gray-500 tracking-widest uppercase mb-6">
                 Portfolio
               </div>
@@ -397,8 +404,29 @@ export default function Component() {
                 <span className="italic text-gray-300">Fazem História</span>
               </h2>
             </div>
+
+            {/* Filter Buttons */}
+            <div className="flex flex-wrap justify-center gap-4 mb-16 overflow-x-auto pb-4 no-scrollbar">
+              {categories.map((category) => (
+                <button
+                  key={category}
+                  onClick={() => {
+                    setActiveFilter(category);
+                    setLightboxIndex(null); // Close lightbox if open when changing filter
+                  }}
+                  className={`px-6 py-2 text-sm font-medium tracking-wide transition-all duration-300 border ${
+                    activeFilter === category
+                      ? "bg-white text-black border-white"
+                      : "bg-transparent text-gray-400 border-gray-800 hover:border-gray-600 hover:text-white"
+                  }`}
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-1">
-              {portfolioImages.map((item, index) => (
+              {filteredImages.map((item, index) => (
                 <div
                   key={index}
                   className="group relative aspect-square overflow-hidden bg-gray-900 cursor-pointer"
@@ -747,8 +775,8 @@ export default function Component() {
           >
             <div className="relative">
               <Image
-                src={portfolioImages[lightboxIndex].src}
-                alt={portfolioImages[lightboxIndex].title}
+                src={filteredImages[lightboxIndex].src}
+                alt={filteredImages[lightboxIndex].title}
                 width={1200}
                 height={900}
                 className="max-w-[90vw] max-h-[80vh] object-contain rounded-sm shadow-2xl"
@@ -758,13 +786,13 @@ export default function Component() {
             {/* Caption */}
             <div className="mt-4 text-center">
               <p className="text-white font-serif text-lg font-medium tracking-wide">
-                {portfolioImages[lightboxIndex].title}
+                {filteredImages[lightboxIndex].title}
               </p>
               <p className="text-gray-400 text-sm mt-1">
-                {portfolioImages[lightboxIndex].location}
+                {filteredImages[lightboxIndex].location}
               </p>
               <p className="text-gray-600 text-xs mt-2">
-                {lightboxIndex + 1} / {portfolioImages.length}
+                {lightboxIndex + 1} / {filteredImages.length}
               </p>
             </div>
           </div>
